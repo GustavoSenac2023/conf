@@ -103,21 +103,22 @@ body{
     top: 35%;
 }
 
-@media  screen and (max-width: 400px) {
+@media screen and (min-width: 400px),
+    screen and (min-height:900px) {
     .container{
         display: flex;
         flex-direction: column;
         height: 60%;
         justify-content: space-between;
-        position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     .col{
-        height: 80%;
+        height: 900px;
         width: 100%;
-        margin: 1px;
+        margin: 5px;
     }
     .col img{
         width: 100%;
@@ -126,7 +127,39 @@ body{
         width: 100%;
         height: auto;
         left: 50%;
-        top: 220%;
+        top: 650%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+    }
+    .footer{
+        width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 710%;
+    left: 0;
+    z-index: 10;
+    background-color: #ff8795;
+    display: flex;
+    justify-content: space-between;
+    }
+}
+@media screen and (max-width:500px),
+    screen and (min-height:900px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        height: 60%;
+        justify-content: space-between;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .text-box{
+        width: 100%;
+        height: auto;
+        left: 50%;
+        top: 290%;
         transform: translate(-50%,-50%);
         position: absolute;
     }
@@ -134,7 +167,7 @@ body{
         width: 100%;
     height: 5%;
     position: absolute;
-    top: 280%;
+    top: 350%;
     left: 0;
     z-index: 10;
     background-color: #ff8795;
